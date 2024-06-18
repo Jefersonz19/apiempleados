@@ -1,12 +1,4 @@
-const { Client } = require('pg');
-
-const client = new Client({
-    user: 'postgres',
-    password: 'password',
-    host: 'localhost',
-    port: '5432',
-    database: 'moduloempleados',
-})
+const client = require('../models/db');
 
 async function connectToDatabase() {
 client
