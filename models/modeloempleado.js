@@ -11,15 +11,15 @@ const getEmpleadoById = async(id) => {
 };
 
 const addEmpleado = async(empleado) => {
-    const {nombre, fecha_ingreso, salario} = empleado;
-    const result = await bd.query(
+    const {id, nombre, fecha_ingreso, salario} = empleado;
+    const result = await bd.query('INSERT INTO EMPLEADO (id, nombre, fecha_ingreso, salario',
         [nombre, fecha_ingreso, salario]
     );
     return result.rows[0];
 };
 
 const deleteEmpleado = async(id) => {
-    const result = await bd.query('DELETE FROM EMPLEADOS WHERE ID = $1 RETURNING *', [id]);
+    const result = await bd.query('DELETE FROM EMPLEADO WHERE ID = $1 RETURNING *', [id]);
     return result.rows[0];
 };
 
