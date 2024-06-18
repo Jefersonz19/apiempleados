@@ -1,6 +1,7 @@
 
 const express = require('express');
 const rutasempleado = require('./routes/rutasempleado');
+const rutassolicitud = require('./routes/rutassolicitud');
 const bodyParser = require('body-parser');
 
 const app = express();
@@ -18,3 +19,4 @@ app.listen(port, ()=> {
 
 app.use(bodyParser.json());
 app.use('/api/empleados', rutasempleado);
+app.use('/api/solicitudes', rutassolicitud);

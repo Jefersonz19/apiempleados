@@ -11,9 +11,10 @@ const getEmpleadoById = async(id) => {
 };
 
 const addEmpleado = async(empleado) => {
-    const {id, nombre, fecha_ingreso, salario} = empleado;
-    const result = await bd.query('INSERT INTO EMPLEADO (id, nombre, fecha_ingreso, salario',
-        [nombre, fecha_ingreso, salario]
+    const { fecha_ingreso, nombre, salario } = empleado;
+    const result = await bd.query('INSERT INTO EMPLEADO (fecha_ingreso, nombre, salario) \
+        VALUES ($1, $2, $3) RETURNING *',
+        [fecha_ingreso, nombre, salario]
     );
     return result.rows[0];
 };

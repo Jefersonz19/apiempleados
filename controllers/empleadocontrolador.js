@@ -18,7 +18,7 @@ const getEmpleadoById = async(req, res) => {
             res.status(404).json({ error: 'Empleado no encontrado'});
         }
     } catch(error) {
-        res.status(500).json({ error: 'Error obteniendo empleado'});
+        res.status(500).json({ error: 'Error obteniendo empleado' });
     }
 };
 

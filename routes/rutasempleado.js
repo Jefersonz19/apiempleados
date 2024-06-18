@@ -7,4 +7,5 @@ router.get('/:id', empleadocontrolador.getEmpleadoById);
 router.post('/', empleadocontrolador.addEmpleado);
 router.delete('/:id', empleadocontrolador.deleteEmpleado);
 
+
 module.exports = router;
