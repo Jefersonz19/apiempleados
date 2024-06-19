@@ -1,23 +1,21 @@
-/*
-const express = require('express');
-const rutasempleado = require('./routes/rutasempleado');
-const rutassolicitud = require('./routes/rutassolicitud');
-const bodyParser = require('body-parser');
+import React from 'react';
+import Empleado from './components/Empleado';
+import Solicitud from './components/Solicitud';
+import { EmpleadoProvider } from './context/EmpleadoContext';
+import { SolicitudProvider } from './context/SolicitudContext';
 
-const app = express();
+const App = () => {
+  return (
+    <EmpleadoProvider>
+      <SolicitudProvider>
+        <div className="App">
+          <h1>Gestión de Empleados y Solicitudes Konecta</h1>
+          <Empleado />
+          <Solicitud />
+        </div>
+      </SolicitudProvider>
+    </EmpleadoProvider>
+  );
+};
 
-const bdConnection = require('./configuration/bdconfig');
-
-bdConnection().then((bd) => {
-    console.log('Connected successfully');
-})
-
-const port = 3030;
-app.listen(port, ()=> {
-    console.log(`server running on port ${port}`);
-});
-
-app.use(bodyParser.json());
-app.use('/api/empleados', rutasempleado);
-app.use('/api/solicitudes', rutassolicitud);
-*/
+export default App;
