@@ -1,5 +1,5 @@
 import React, { useContext, useState } from 'react';
-import { SolicitudContext } from '../context/SolicitudContext';
+import { SolicitudContext } from '../context/Solicitudcontext';
 import { EmpleadoContext } from '../context/EmpleadoContext';
 import axios from 'axios';
 
