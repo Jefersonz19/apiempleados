@@ -1,11 +1,11 @@
-const client = require('../models/db');
+const pool = require('../models/db');
 
 async function connectToDatabase() {
-client
+pool
     .connect()
     .then(() => {
         console.log('Connected to PostGreSQL successfully');
-        return client.database;
+        return pool.database;
     })
     .catch((err) => {
         console.log('Unable to connect', err);
