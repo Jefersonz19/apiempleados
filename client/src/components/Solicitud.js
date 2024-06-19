@@ -1,6 +1,6 @@
 import React, { useContext, useState } from 'react';
 import { SolicitudContext } from '../context/Solicitudcontext';
-import { EmpleadoContext } from '../context/EmpleadoContext';
+import { EmpleadoContext } from '../context/Empleadocontext';
 import axios from 'axios';
 
 const Solicitud = () => {

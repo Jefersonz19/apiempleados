@@ -1,5 +1,5 @@
 import React, { useContext, useState } from 'react';
-import { EmpleadoContext } from '../context/EmpleadoContext';
+import { EmpleadoContext } from '../context/Empleadocontext';
 import axios from 'axios';
 
 const Empleado = () => {

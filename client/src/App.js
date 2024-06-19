@@ -1,8 +1,8 @@
 import React from 'react';
 import Empleado from './components/Empleado';
 import Solicitud from './components/Solicitud';
-import { EmpleadoProvider } from './context/EmpleadoContext';
-import { SolicitudProvider } from './context/SolicitudContext';
+import { EmpleadoProvider } from './context/Empleadocontext';
+import { SolicitudProvider } from './context/Solicitudcontext';
 
 const App = () => {
   return (
